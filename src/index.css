@@ -1,0 +1,135 @@
+:root {
+  /* Espresso Theme Palette */
+  --bg-cream: #FDFBF7;
+  --surface-latte: #F5EFEB;
+  --text-espresso: #4A3B32;
+  --text-mocha: #7D6B58;
+  --accent-caramel: #C08552;
+  --accent-caramel-hover: #A66E3E;
+  --border-subtle: #E6DCCD;
+
+  /* Shapes */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+
+  /* Effects */
+  --shadow-soft: 0 10px 30px -5px rgba(74, 59, 50, 0.05);
+  --shadow-hover: 0 20px 40px -5px rgba(74, 59, 50, 0.1);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-cream);
+  color: var(--text-espresso);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-espresso);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-mocha);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background: var(--surface-latte);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-primary {
+  background-color: var(--accent-caramel);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-caramel-hover);
+}
+
+input,
+textarea {
+  font-family: inherit;
+  background: white;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  width: 100%;
+  color: var(--text-espresso);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-caramel);
+  box-shadow: 0 0 0 3px rgba(192, 133, 82, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-mocha);
+  border-radius: 999px;
+  border: 3px solid var(--bg-cream);
+}
