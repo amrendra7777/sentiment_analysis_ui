@@ -49,7 +49,7 @@ Follow these instructions to run the project locally.
 
 1.  **Clone the repository**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/amrendra7777/sentiment_analysis_ui
     cd sentiment_analysis_ui
     ```
 
