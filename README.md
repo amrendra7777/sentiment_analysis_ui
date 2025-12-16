@@ -1,16 +1,82 @@
-# React + Vite
+# Sentiment Analysis Web App 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive web application that uses deep learning to analyze human emotions in text. Built with React and powered by a custom Multi-Layer Perceptron (MLP) model deployed on Hugging Face.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates the journey of building a sentiment analysis tool. Unlike standard "positive/negative" classifiers, this application detects specific emotions (Joy, Sadness, Anger, Fear, etc.) using a neural network trained to achievie **92% accuracy**.
 
-## React Compiler
+The user interface is designed with a "Warm Espresso" aesthetic to provide a comfortable and engaging user experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+### 1. Interactive AI Demo 
+- **Real-time Analysis**: Type any sentence, and the app connects to our live Hugging Face API to predict the emotion.
+- **Dynamic Feedback**: The UI instantly reacts with color-coded confidence bars (Green for positive emotions, Red for negative).
+- **History Tracking**: Keeps a log of your recent queries within the session.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. The "Story" of Accuracy 
+- features a unique **"Chain with Beads"** visualization.
+- This interactive timeline showcases our experimentation journey:
+    1.  Logistic Regression (62%)
+    2.  Linear Support Vector (60%)
+    3.  Multinomial Naive Bayes (51%)
+    4.  Random Forest (58%)
+    5.  **Final MLP Model (92%)**
+- Elements animate into view as you scroll, highlighting the dramatic improvement of the final deep learning model.
+
+### 3. Modern UI/UX 
+- **Theme**: "Espresso & Latte" – a palette of warm browns, creams, and caramels.
+- **Animations**: Powered by `framer-motion` for smooth entrances, hover effects, and transitions.
+- **Responsive**: Fully optimized for different screen sizes.
+
+## Technology Stack
+
+- **Frontend**: React (Vite)
+- **Styling**: CSS Modules, Framer Motion (Animations), Lucide React (Icons)
+- **API**: Custom FastAPI backend hosted on Hugging Face Spaces
+- **Model Architecture**: Multi-Layer Perceptron (MLP)
+
+## Getting Started
+
+Follow these instructions to run the project locally.
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (Node Package Manager)
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone <repository-url>
+    cd sentiment_analysis_ui
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in Browser**
+    Visit `http://localhost:5173` (or the URL shown in your terminal).
+
+## Testing the API
+
+The application connects to the public API endpoint:
+`https://amrendraa-sentiment-analysis-mlp.hf.space/predict`
+
+You can manually verify it works using curl:
+```bash
+curl -X POST https://amrendraa-sentiment-analysis-mlp.hf.space/predict \
+     -H "Content-Type: application/json" \
+     -d '{"text": "I am so happy with this result!"}'
+```
+
+---
+*Created for <Course/Subject Name> Project Submission.*
