@@ -78,5 +78,4 @@ curl -X POST https://amrendraa-sentiment-analysis-mlp.hf.space/predict \
      -d '{"text": "I am so happy with this result!"}'
 ```
 
----
-*Created for <Course/Subject Name> Project Submission.*
+
