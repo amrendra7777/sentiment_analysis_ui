@@ -5,7 +5,7 @@ const TEAM_MEMBERS = [
     { name: "Amrendra Singh Maan", roll: "2221567" },
     { name: "Ishmeet Kaur", roll: "22221580" },
     { name: "Amit Kumar Yadav", roll: "2221566" },
-    { name: "Chhote Lal Yadav", roll: "2221500" }
+    { name: "Chhote Lal Yadav", roll: "2221572" }
 ];
 
 const HeroSection = () => {
