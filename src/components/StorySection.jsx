@@ -8,7 +8,7 @@ const StorySection = () => {
         { name: "Multinomial Naive Bayes", accuracy: 51 },
         { name: "Random Forest", accuracy: 58 },
         { name: "Multi-Layer Perceptron (MLP)", accuracy: 92 },
-        { name: "GRU", accuracy: 94, highlight: true }
+        { name: "Gated Recurrent Network (GRN)", accuracy: 94, highlight: true }
     ];
 
     return (
